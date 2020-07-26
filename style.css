@@ -1,0 +1,296 @@
+body{
+	padding:0;
+	margin:0;
+	overflow-x: hidden!important;
+}
+*{box-sizing: border-box!important;}
+
+.bones{font-family: Bones;}
+.marg{margin: 16px;}
+.marg-sm{margin: 8px}
+.m-off{margin: 0px!important;}
+.m-up{margin-top: 16px;}
+.m-down{margin-bottom: 16px;}
+.m-hor{margin-top:16px;margin-bottom: 16px;}
+.m-vert{margin-left: 16px; margin-right: 16px;}
+.show-block{display: block!important;}
+.show-flex{display: flex!important}
+.hide{display: none}
+.fl-left{float: left;} .fl-right{float: right;}
+.pad{padding: 16px;}
+.pad-lg{padding: 32px;}
+.pad-sm{padding: 8px;}
+.pad-off{padding: 0px!important;}
+.trans-off{transform: translate(0, 0)!important;opacity: 1!important;}
+.list-style-off{list-style: none;}
+.fas, .fab, .far{margin: 0;padding: inherit;}
+.text-decor-off{text-decoration: none!important}
+.btn-solid, .btn-light:hover{
+	border: transparent!important;
+	background-image: linear-gradient(120deg, #157882, #01324a)!important;
+	color: white;
+	border-radius: 8px;
+}
+.btn-light, .btn-solid:hover{
+	background: #fff!important;
+	border: transparent!important;
+	color: #01324a;
+	border-radius: 8px;
+}
+.btn-border{
+	background: transparent!important;
+	border-radius: none!important;
+	border: 1px solid white;
+	color: white;
+}
+.btn-border:hover{
+	background: #fff!important;
+	border: transparent!important;
+	color: #01324a;
+}
+a{
+	color: inherit!important;
+	cursor: pointer;
+	text-decoration: none!important;
+}
+button{
+	font-family: Montserrat, sans-serif!important;
+	outline: none!important;
+	transition: all .4s ease-out;
+	letter-spacing: 2px;
+}
+button:hover{transform: scale(1.05, 1.05);}
+
+/*=========Navigation Bar=======*/
+.navbar{
+	margin: 0;
+	position: fixed!important;
+	height: 10vh;
+	background: rgba(0,0,0,.96);
+	z-index: 1000;
+	color: #aaa;
+	width: 100%!important;
+	padding: 8px 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 1px 2px 12px black;
+}
+.navbar img{max-width: 8vh;max-height: 8vh}
+#toggle-menu{display: none}
+#menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 60%;
+	align-items: center;
+	margin: 0;
+	list-style: none;
+	transition: transform .4s ease-out;
+	z-index: 10;
+}
+#menu li{
+	cursor: pointer;
+	letter-spacing: 3px;
+	transition: all .4s ease-out;
+	font-family: Georgia, serif;
+}
+#menu li:hover{color:#fff;}
+#menu li:not(:last-child):hover{transform: scale(1.4, 1.4)}
+.drop-down{
+	position: relative;
+	left: -12px;
+	display: inline-block;
+	width: 20%;
+}
+.drop-btn{
+	padding: 8px;
+	letter-spacing: initial;
+	border-radius: none!important;
+}
+.drop-btn:hover{transform: none!important;}
+.drop-content{
+	/*width: 110%;*/
+	padding: 0;
+	background: white;
+	border: 1px solid #fff;
+	color: #444;
+	transition: all 1s ease;
+	/*font-size: 1px;*/
+}
+.drop-item{
+	display: block!important;
+	padding: 6px 0 6px 2px;
+	margin: 0;
+	/*width: 100%;*/
+	word-spacing: 5px;
+	letter-spacing: initial;
+	color: black;
+	font-family: Montserrat, sans-serif;
+}
+.drop-item:hover, .drop-item:active{
+	background: #01324a!important;
+	color: #fff!important;
+}
+
+/*==========Header Section========*/
+header{
+	color: white;
+	height: 520px;
+	background-image: url("images/imgs1.jpg");
+	background-size: cover;
+}
+.foregrnd {
+	position: relative;
+	height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(1, 50, 78, .48);
+}
+#title{
+	position: absolute;
+	top: 32vh;
+	z-index: 3;
+	left: 10vw;
+	text-align: left;
+}
+#title h1{
+	font-family: "Arial Black", sans-serif;
+	color: white;
+	font-size: 52px!important;
+	word-spacing: 2px;
+}
+#title h4{
+	font-family: Bones,Tahoma, sans-serif;
+	letter-spacing: 2px;
+	font-style: italic;
+	font-size: 24px;
+	color: white;
+}
+aside{
+	position: sticky;
+	top: 0;
+	background: #01324a;
+	color: white;
+}
+
+main{
+}
+.wrapper{
+	display: relative;
+	cursor: pointer;
+	/*height: 400px;*/
+}
+.overlay{
+	position: absolute;
+	height: 100%;
+	transition: all .4s ease-out;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transform: scale(0);
+	opacity: 0;
+	background: linear-gradient(120deg, rgba(21, 120, 130, .6), rgba(1, 50, 74,.6));
+	color: rgba(256, 256, 256, .8);
+	font-family: "Comic Sans", sans-serif;
+	z-index: 10;
+}
+.wrapper:hover .overlay{
+	transform: scale(1);
+	opacity: 1;
+}
+.profile-name{
+	padding-top: 8px;
+	font-family: Georgia, sans-serif;
+	color: rgba(256, 256, 256, 1);
+	background: inherit!important;
+}
+.profile-names i{
+	font-family: 'Comic Sans', sans-serif; 
+	font-size: 12px;
+}
+.overlay-btn{
+	font-weight: 100;
+	font-size: 32px;
+	font-family: bones;
+}
+.overlay-btn:hover{
+	color: white;
+}
+
+.profile-links a i:hover{
+ 	color: #01324a!important;
+ 	cursor: pointer;
+ }
+.caption{
+	background-image: linear-gradient(120deg, #157882, #01324a);
+	color: white;
+	line-height: 24px;
+	padding: 8px 16px;
+	font-family: "Georgia", serif;
+	font-size: 20px;
+	margin: 0;
+}
+
+footer{
+	background: black;
+	color: white;
+}
+
+
+/*=====Large Devices (laptops, and up)=======*/
+@media screen and (max-width: 1100px){
+	#title{left: 8vw;top: 24vh;}
+}
+@media screen and (min-width: 921px){
+	.drop-content{
+		position: absolute;
+		font-size: 16px;
+		width: 120%;
+	}
+}
+/*========Medium Devices=======*/
+@media screen and (max-width: 920px){
+	.navbar{height: 10vh;}
+	#toggle-menu{
+		display: block;
+		border: 1px solid #fff;
+		color: #fff;
+		font-size: 16px;
+		padding: 4px 8px;
+		margin: 0;
+	}
+	#toggle-menu:hover{color: white;border-color: white}
+	#toggle-menu:active{color: #666;border-color: #666}
+	#menu{
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		position: absolute;
+		margin: 0;
+		background: inherit;
+		padding: 12px;
+		top: 10vh;
+		height: 90vh;
+		right: 0;
+		width: 85vw;
+		transform: translateX(100%);
+	}
+	#menu li{padding: 16px;}
+	.navbar .drop-down{
+		order: -1;
+		width: 100%;
+	}
+}
+/*=====Small Devices(smartphones, portrait tablets, and up)=====*/
+@media screen and (max-width: 768px){
+	#title{left: 8vw;top: 16vh;}
+}
+
+/*========Smaller Devices=============*/
+@media screen and (max-width: 668px){
+
+}
